@@ -1,0 +1,48 @@
+.container {
+    height: auto;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 50px 0 50px;
+    width: 400px;
+    
+}
+
+
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    
+}
+
+.statList {
+    display: flex;
+}
+
+.item {
+    width: calc(100% / 4); 
+}
+.percentage,
+.label {
+    display: flex;
+    justify-content: space-around;
+}
+
+.label {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.percentage {
+color:white;
+padding: 5px;
+font-size: 20px;
+}
+.title {
+    background-color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+}

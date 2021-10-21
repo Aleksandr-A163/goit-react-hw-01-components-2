@@ -1,0 +1,32 @@
+[
+    {
+      "avatar": "https://img0.liveinternet.ru/images/attach/c/0/42/235/42235532_0_1c993_5b7fb675_XL.jpg",
+      "name": "Mango",
+      "isOnline": true,
+      "id": 1812
+    },
+    {
+      "avatar": "https://avatars.mds.yandex.net/i?id=6778da11aeb61ad8422ab6bad812462b-4103093-images-thumbs&n=13",
+      "name": "Panda Amanda",
+      "isOnline": false,
+      "id": 1137
+    },
+    {
+      "avatar": "https://pixy.org/src2/640/thumbs350/6406452.jpg",
+      "name": "Ajax",
+      "isOnline": true,
+      "id": 1213
+    },
+    {
+      "avatar": "https://1.bp.blogspot.com/-W1y4nNtzXP8/VGj_Zzf72PI/AAAAAAAAD6E/pF3uVgCfvn0/s1600/templatezy1.jpg",
+      "name": "Jay",
+      "isOnline": true,
+      "id": 1714
+    },
+    {
+      "avatar": "https://cdn.trinixy.ru/pics5/20120420/irina_vorotyntseva_117.jpg",
+      "name": "Poly",
+      "isOnline": false,
+      "id": 1284
+    }
+  ]
