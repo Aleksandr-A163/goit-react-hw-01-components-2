@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Statistics from './Statistics';
 import style from './Statistics.module.css';
 
 
@@ -27,10 +26,8 @@ const StatisticList = ({ title, stats }) => {
                             key={stat.id}
                             style={{ backgroundColor: createColor() }}
                         >
-                            <Statistics
-                                label={stat.label}
-                                percentage={stat.percentage}
-                            />
+                            <span className={style.label}>{stat.label}</span>
+                            <span className={style.percentage}>{stat.percentage}%</span>
                         </li>
                     ))}
                 </ul>
@@ -41,12 +38,14 @@ const StatisticList = ({ title, stats }) => {
 };
 
 StatisticList.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
         }),
     ),
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
 };
 
 export default StatisticList;

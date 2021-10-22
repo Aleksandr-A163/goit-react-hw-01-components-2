@@ -18,8 +18,8 @@ Friend.defaultProps = {
 
 Friend.propTypes = {
     id: PropTypes.number.isRequired,
-    avatar: PropTypes.string,
-    name: PropTypes.string,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     isOnline: PropTypes.oneOf(['onLine', 'offLine']),
 };
 

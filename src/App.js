@@ -22,9 +22,8 @@ export default function App() {
                     tag={profile.tag}
                     location={profile.location}
                     avatar={profile.avatar}
-                    followers={profile.stats.followers}
-                    views={profile.stats.views}
-                    likes={profile.stats.likes}
+                    stats={profile.stats}
+
                 />
 
                 <StatisticList title={'upload stats'} stats={statisticalData} />

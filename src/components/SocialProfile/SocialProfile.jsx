@@ -7,9 +7,7 @@ export default function SocialProfile({
     name,
     tag,
     location,
-    followers,
-    views,
-    likes,
+    stats,
 }) {
     return (
         <div className={style.profile}>
@@ -27,27 +25,37 @@ export default function SocialProfile({
             <ul className={style.stats}>
                 <li className={style.statsItem}>
                     <span className={style.label}>Followers </span>
-                    <span className={style.quantity}>{followers}</span>
+                    <span className={style.quantity}>{stats.followers}</span>
                 </li>
                 <li className={style.statsItem}>
                     <span className={style.label}>Views </span>
-                    <span className={style.quantity}>{views}</span>
+                    <span className={style.quantity}>{stats.views}</span>
                 </li>
                 <li className={style.statsItem}>
                     <span className={style.label}>Likes </span>
-                    <span className={style.quantity}>{likes}</span>
+                    <span className={style.quantity}>{stats.likes}</span>
                 </li>
             </ul>
         </div>
     );
-}
+};
 
 SocialProfile.propTypes = {
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+    stats: PropTypes.object.isRequired,
 };
+
+SocialProfile.defaultProps = {
+    name: 'User name',
+    tag: '@User tag',
+    location: 'User location',
+    avatar: 'https://avatars.mds.yandex.net/get-zen_doc/163385/pub_5edb5e34221f4123b4d856e8_5edb6109b9e66247de83bbd4/scale_1200',
+    stats: {
+      followers: '0',
+      views: '0',
+      likes: '0',
+    },
+  };
