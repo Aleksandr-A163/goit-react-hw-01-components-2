@@ -40,12 +40,12 @@ const StatisticList = ({ title, stats }) => {
 StatisticList.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
+        PropTypes.exact({
+          id: PropTypes.string.isRequired,
+          label: PropTypes.oneOf(['.docx', '.pdf', '.mp3', '.psd']).isRequired,
+          percentage: PropTypes.number.isRequired,
         }),
-    ),
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
+      ).isRequired,
 };
 
 export default StatisticList;
