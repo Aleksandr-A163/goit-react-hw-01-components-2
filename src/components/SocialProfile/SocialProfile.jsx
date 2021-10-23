@@ -7,7 +7,7 @@ export default function SocialProfile({
     name,
     tag,
     location,
-    stats,
+    stats: { followers, views, likes },
 }) {
     return (
         <div className={style.profile}>
@@ -23,18 +23,18 @@ export default function SocialProfile({
             </div>
 
             <ul className={style.stats}>
-                <li className={style.statsItem}>
-                    <span className={style.label}>Followers </span>
-                    <span className={style.quantity}>{stats.followers}</span>
-                </li>
-                <li className={style.statsItem}>
-                    <span className={style.label}>Views </span>
-                    <span className={style.quantity}>{stats.views}</span>
-                </li>
-                <li className={style.statsItem}>
-                    <span className={style.label}>Likes </span>
-                    <span className={style.quantity}>{stats.likes}</span>
-                </li>
+                        <li className={style.statsItem}>
+                            <span className={style.label}>Followers </span>
+                            <span className={style.quantity}>{followers}</span>
+                        </li>
+                        <li className={style.statsItem}>
+                            <span className={style.label}>Views </span>
+                            <span className={style.quantity}>{views}</span>
+                        </li>
+                        <li className={style.statsItem}>
+                            <span className={style.label}>Likes </span>
+                            <span className={style.quantity}>{likes}</span>
+                        </li>
             </ul>
         </div>
     );
