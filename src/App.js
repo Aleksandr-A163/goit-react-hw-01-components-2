@@ -26,7 +26,7 @@ export default function App() {
 
                 />
 
-                <StatisticList title={'upload stats'} stats={statisticalData} />
+                <StatisticList title='upload stats' stats={statisticalData} />
 
                 <FriendsList friends={friends} />
 

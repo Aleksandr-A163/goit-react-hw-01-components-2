@@ -17,17 +17,17 @@ const createColor = () => {
 const StatisticList = ({ title, stats }) => {
     return (
         <section className={style.container}>
-            <h2 className={style.title}>{title}</h2>
+            {title && <h2 className={style.title}>{title}</h2>}
             <div className={style.wrapper}>
                 <ul className={style.statList}>
-                    {stats.map(stat => (
+                    {stats.map(({ id, label, percentage }) => (
                         <li
                             className={style.item}
-                            key={stat.id}
+                            key={id}
                             style={{ backgroundColor: createColor() }}
                         >
-                            <span className={style.label}>{stat.label}</span>
-                            <span className={style.percentage}>{stat.percentage}%</span>
+                            <span className={style.label}>{label}</span>
+                            <span className={style.percentage}>{percentage}%</span>
                         </li>
                     ))}
                 </ul>
@@ -41,9 +41,9 @@ StatisticList.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.exact({
-          id: PropTypes.string.isRequired,
-          label: PropTypes.oneOf(['.docx', '.pdf', '.mp3', '.psd']).isRequired,
-          percentage: PropTypes.number.isRequired,
+          id: PropTypes.string,
+          label: PropTypes.oneOf(['.docx', '.pdf', '.mp3', '.psd']),
+          percentage: PropTypes.number,
         }),
       ).isRequired,
 };

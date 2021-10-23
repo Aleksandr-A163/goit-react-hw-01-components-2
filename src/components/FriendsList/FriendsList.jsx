@@ -5,20 +5,14 @@ import styles from './FriendList.module.css'
 
 const FriendsList = ({ friends }) => (
     <ul className={styles.stat_list}>
-        {friends.map((friend) => {
-            let isOnline = 'onLine'
-            if (!friend.isOnline) {
-               isOnline = 'offLine'
-            }
-
-            return (
+        {friends.map(({ isOnline, id, avatar, name }) => (
             <Friend
-                id={friend.id}
-                avatar={friend.avatar}
-                name={friend.name}
+                id={id}
+                avatar={avatar}
+                name={name}
                 isOnline={isOnline}
             />
-        )})}
+        ))}
     </ul>
 );
 
